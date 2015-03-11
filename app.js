@@ -24,7 +24,7 @@ app.factory('posts', [function(){
 }]);
 
 app.controller('PostsCtrl', ['$scope', '$stateParams', 'posts', function($scope, $stateParams, posts){
-  $scope.posts.id = post.posts[$stateParams.id];
+  $scope.posts = post.posts[$stateParams.id];
 
   $scope.addComment = function(){
     if($scope.body === '') { return; }
